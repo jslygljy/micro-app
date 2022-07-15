@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(240, 242, 245, 1);
+}
+a {
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.svg-icon:focus {
+  outline: none;
+}
+ul,
+dl,
+p {
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+input {
+  outline: none;
+  -webkit-apperance: none;
+}
+ul,
+dl {
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+.text-underline:hover {
+  text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex-y-end {
+  align-items: flex-end;
+}
+
+// 鼠标样式
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// 滚动调样式
+::-webkit-scrollbar {
+  border-radius: 4px;
+  width: 7px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #0000000d;
+}
+::-webkit-scrollbar-thumb {
+  position: fixed;
+  border-radius: 4px;
+  background-color: #9093994d;
+  box-shadow: inset 0 0 6px #0003;
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 4px;
+  background-color: #b6b7b9;
+}
+
+// 加载进度条
+#nprogress .bar {
+  background: #1890ff !important;
+}
+
+/**
+ * 剧中方式
+ */
+$fonts: left, right, center;
+@each $i in $fonts {
+  .text-#{$i} {
+    text-align: #{$i};
+  }
+}
+
+// 超出指定行数省略号
+@mixin line-clamp($number) {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+// 文本溢出隐藏
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 定义了一些常用的内边距和外边距
+$gauge: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 88, 96, 100;
+@each $i in $gauge {
+  .m-#{$i} {
+    margin: $i + px;
+  }
+  .m-t#{$i} {
+    margin-top: $i + px;
+  }
+  .m-b#{$i} {
+    margin-bottom: $i + px;
+  }
+  .m-l#{$i} {
+    margin-left: $i + px;
+  }
+  .m-r#{$i} {
+    margin-right: $i + px;
+  }
+  .m-lr#{$i} {
+    margin-left: $i + px;
+    margin-right: $i + px;
+  }
+  .m-tb#{$i} {
+    margin-top: $i + px;
+    margin-bottom: $i + px;
+  }
+
+  .p-#{$i} {
+    padding: $i + px;
+  }
+  .p-t#{$i} {
+    padding-top: $i + px;
+  }
+  .p-b#{$i} {
+    padding-bottom: $i + px;
+  }
+  .p-l#{$i} {
+    padding-left: $i + px;
+  }
+  .p-r#{$i} {
+    padding-right: $i + px;
+  }
+  .p-lr#{$i} {
+    padding-left: $i + px;
+    padding-right: $i + px;
+  }
+  .p-tb#{$i} {
+    padding-top: $i + px;
+    padding-bottom: $i + px;
+  }
+}
+
+/**
+ * 情境颜色
+ */
+$colors: (
+  "primary": #1a73e8,
+  "danger": #ff4d4f,
+  "success": #52c41a,
+  "info": #909399,
+  "warning": #faad14,
+  "ffffff": #ffffff,
+  "000000": #000000,
+  "333333": #333333,
+  "666666": #666666,
+  "999999": #999999,
+  "eeeeee": #eeeeee,
+  "e9e9e9": #e9e9e9,
+);
+@each $colorKey, $color in $colors {
+  .color-#{$colorKey} {
+    color: $color;
+  }
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+/**
+ * 字体大小
+ */
+$fonts: 12, 13, 14, 16, 18, 20, 26, 32;
+@each $i in $fonts {
+  .font-#{$i} {
+    font-size: #{$i} + px;
+  }
+}

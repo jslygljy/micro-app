@@ -1,0 +1,38 @@
+{
+  "name": "micro-app",
+  "version": "0.0.2",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run start",
+    "start:main": "lerna exec --scope micro-app-main npm run start",
+    "start:vue": "lerna exec --scope vue3 npm run start",
+    "start:vite": "lerna exec --scope vite npm run start",
+    "build": "lerna run build",
+    "build:vue": "lerna exec --scope vue3 npm run start",
+    "build:main": "lerna exec --scope micro-app-main npm run start",
+    "publish": "lerna publish --skip-npm"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0"
+  },
+  "register": "",
+  "author": "junyu",
+  "license": "MIT",
+  "keywords": [
+    "qiankun",
+    "vue3",
+    "vuex",
+    "lerna",
+    "vue-router"
+  ],
+  "dependencies": {
+    "by-tools": "^1.1.31",
+    "element-plus": "^2.2.7"
+  }
+}

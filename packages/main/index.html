@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>micro-app-main</title>
+  </head>
+  <body>
+    <div id="root-app"></div>
+    <script>
+      function push(subapp) { history.pushState(null, subapp, subapp) }
+    </script>
+    <script type="module" src="/src/main.ts"></script>  </body>
+</html>

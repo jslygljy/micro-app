@@ -1,0 +1,160 @@
+#frameword-loading {
+  position: fixed;
+  width: 100wh;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  text-align: center;
+  div {
+    position: absolute;
+    top: 45%;
+    color: #1a73e8;
+    p {
+      position: relative;
+      left: 4px;
+      font-size: 13px;
+    }
+  }
+}
+.framework {
+  .ant-layout-sider {
+    position: relative;
+    height: 100vh;
+    color: #ffffff;
+    &.ant-layout-sider-collapsed {
+      flex: 0 0 60px !important;
+      max-width: 60px !important;
+      min-width: 60px !important;
+      width: 60px !important;
+    }
+    .logo {
+      padding: 0 20px;
+      height: 52px;
+      line-height: 52px;
+    }
+    .ant-menu-root {
+      height: calc(100vh - 52px);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 0px !important;
+      }
+    }
+    // 图标和文字的距离
+    .ant-menu-item .ant-menu-item-icon + span,
+    .ant-menu-submenu-title .ant-menu-item-icon + span,
+    .ant-menu-item .anticon + span,
+    .ant-menu-submenu-title .anticon + span {
+      margin-left: 8px;
+    }
+    // 一级菜单图标
+    .ant-menu-inline .ant-menu-item,
+    .ant-menu-inline .ant-menu-submenu-title {
+      padding-left: 17px !important;
+    }
+
+    // 二级菜单 - 无子菜单
+    .ant-menu-inline .ant-menu-submenu-inline .ant-menu-inline .ant-menu-item {
+      padding-left: 46px !important;
+    }
+    // 二级菜单 - 有子菜单
+    .ant-menu-inline .ant-menu-submenu-inline .ant-menu-inline .ant-menu-submenu-inline .ant-menu-submenu-title {
+      padding-left: 46px !important;
+    }
+    // 三级菜单
+    .ant-menu-inline
+      .ant-menu-submenu-inline
+      .ant-menu-inline
+      .ant-menu-submenu-inline
+      .ant-menu-inline
+      .ant-menu-item {
+      padding-left: 60px !important;
+    }
+
+    .ant-menu-inline > .ant-menu-item > svg,
+    .ant-menu-inline > .ant-menu-submenu-inline > .ant-menu-submenu-title > svg {
+      position: relative !important;
+      top: -1px !important;
+    }
+  }
+  .ant-menu.ant-menu-inline-collapsed > .ant-menu-item,
+  .ant-menu.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
+  .ant-menu.ant-menu-inline-collapsed
+    > .ant-menu-item-group
+    > .ant-menu-item-group-list
+    > .ant-menu-submenu
+    > .ant-menu-submenu-title,
+  .ant-menu.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+    padding: 0 calc(50% - 21px / 2);
+  }
+  // ant-layout-header
+  .ant-layout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #ffffff;
+    .left {
+      .trigger {
+        position: relative;
+        width: 50px;
+        height: 46px;
+        margin-left: -17px;
+        border-radius: 0 6px 6px 0;
+        svg {
+          position: absolute;
+          top: 50%;
+          margin-top: -11px;
+          margin-left: 4px;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: #f0f2f5;
+        }
+      }
+    }
+    .right {
+      .full-screen {
+        color: #323232;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+  // ant-layout-content
+  .ant-layout-content {
+    height: calc(100vh - 108px);
+    padding: 17px 0 17px 17px;
+    overflow-y: scroll;
+  }
+}
+// 折叠菜单图标
+.ant-menu-vertical .ant-menu-submenu-title svg,
+.ant-menu-vertical .ant-menu-item svg {
+  position: relative;
+  top: 5px;
+  margin-right: -2px;
+}
+
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-vertical-left > .ant-menu-item,
+.ant-menu-vertical-right > .ant-menu-item,
+.ant-menu-inline > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-sub.ant-menu-inline > .ant-menu-item,
+.ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 44px;
+  line-height: 44px;
+}

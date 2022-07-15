@@ -1,0 +1,23 @@
+// --------------------!注意!-------------------
+//
+//                对于element-ui的组件
+//                    修改主题色后
+//                需要重新打包才能生效
+//
+// ---------------------------------------------
+
+/** 主色调*/
+// $theme-main-color: #013d97;
+$theme-main-color: #1890ff;
+
+/** 辅助色 */
+// $theme-accent-color: #eff6ff;
+$theme-accent-color: transparent;
+
+$top-color: #202d5f;
+$bottom-color: #101630;
+
+$hover-color: #133c9a;
+$hover-color-active: #1890ff;
+
+$header-height: 64px;
