@@ -33,7 +33,7 @@ const props = defineProps<{config?: any}>();
 const emit = defineEmits(["file:change"]);
 
 const defaultConfig = {
-    action: "http://yapi.syy.dongchali.cn/mock/730/upload",
+    action: "http://upload",
     listType: "picture-card",
     maxCount: 1,
     accept: "",
